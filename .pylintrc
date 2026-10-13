@@ -1,0 +1,18 @@
+# ─────────────────────────────────────────────────────────────────────────
+# Pylint configuration — static-analysis scope for the CLA project.
+#
+# The `groundingdino/` package is the VENDORED third-party base framework
+# (Grounding DINO / DitHub / Detectron2 / Deformable-DETR / Microsoft LoRA /
+# OpenMMLab mmcv, etc.). Per this project's open-source usage policy it is used
+# verbatim and is NOT modified, so the whole vendored tree is excluded from this
+# project's static analysis (upstream code is the upstream authors' responsibility).
+#
+# In-scope (this project's own code): main.py, tools/, tests/, configs/, conftest.py.
+#
+# Note: the CLA method module `groundingdino/util/task_memory.py` physically lives
+# inside the vendored package path and is therefore also excluded by this tree-level
+# rule. It is static-analysis-clean; to analyze it explicitly, run e.g.
+#   pylint main.py tools tests groundingdino/util/task_memory.py
+# ─────────────────────────────────────────────────────────────────────────
+[MAIN]
+ignore-paths=.*groundingdino/.*

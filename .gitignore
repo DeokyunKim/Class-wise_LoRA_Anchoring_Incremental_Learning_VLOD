@@ -1,0 +1,42 @@
+# ── Byte-compiled / caches ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.cache
+.ipynb_checkpoints
+
+# ── Compiled CUDA extensions ────────────────────────────────────────────
+# Built locally via Deformable-DETR/models/ops/make.sh (see README).
+*.so
+build/
+*.egg-info/
+*.egg
+
+# ── Model weights / checkpoints ─────────────────────────────────────────
+# Pretrained GroundingDINO and trained LoRA checkpoints are downloaded /
+# produced locally, never committed.
+*.pth
+*.pt
+groundingdino_swint_ogc.pth
+
+# ── Datasets (symlinked or downloaded locally) ──────────────────────────
+/datasets/
+datasets/coco
+datasets/odinw*
+
+# ── Experiment outputs ──────────────────────────────────────────────────
+output/
+outputs/
+*.log
+*.out
+*.nohup
+
+# ── Environments / editors ──────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.idea/
+.vscode/
+.DS_Store
